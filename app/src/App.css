@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+*::selection {
+  background: rgb(0, 0, 0);
+  color:white
+}
+.app__title {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  background-color: #ffffff;
+  padding-block: 0.4em;
+}
+
+.repos-container {
+  width: 90%;
+  background-color: #ffffff;
+  margin: auto;
+}
+.form {
+  padding: 20px;
+  display: flex;
+  background-color: rgb(27 112 107);
+  border-radius: 5px;
+}
+.form__input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  font-size: 20px;
+  height: 54px;
+}
+.form__input:focus {
+  outline: 4px solid darkmagenta;
+}
+.form__button {
+  width: 190px;
+  margin-left: 10px;
+  height: 54px;
+  background-color: darkmagenta;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter .3s
+}
+.form__button:hover{
+  filter: drop-shadow(3px 3px 12px rgb(128, 0, 100)) invert(1%);
+}
+.gitInfo{
+  height: 8em;
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "name id img"
+  "link date img";
+  grid-column-gap: 2px;
+  grid-row-gap: 0px;
+  border-radius: 5px;
+  align-items: center;
+  background-color: lightseagreen;
+  padding: 1em;
+  justify-items: center;
+}
+.gitInfo__name {
+grid-area: name;
+transition: all .2s;
+color: darkmagenta;
+cursor: default;
+font-weight: 600;
+text-align: center;
+}
+.gitInfo__id{
+  grid-area: id;
+  transition: all .2s;
+  color: darkmagenta;
+  cursor: default;
+}
+.gitInfo__link{
+  grid-area: link;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all .2s;
+  color: darkmagenta;
+}
+.gitInfo__date{
+  grid-area: date;
+  transition: all .2s;
+  color: darkmagenta;
+  cursor: default;
+}
+.gitInfo__img{
+  grid-area: img;
+height: 6em;
+border-radius: 15px;
+justify-self: center;
+transition: transform .3s
+}
+.gitInfo__img:hover{
+  transform: scale(1.3);
+}
+.hover:hover, .repo__link:hover{
+  color: rgb(255 0 129);
+  padding: 5px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.repos{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+  justify-content: center;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    background-color: #024200;
+  }
+  100% {
+    transform: translateX();
+    opacity: 1;
+    background-color: rgb(24 219 208);
+
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(+100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX();
+    opacity: 1;
+  }
+}
+
+.error, .repos__empty{
+  text-align: center;
+  font-size: 1.4em;
+  padding: 1em;
+  color: darkmagenta; 
+}
+
+.repo{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-top: 1em;
+  background-color: rgb(24 219 208);
+  border-radius: 5px;
+  width: 48%;
+  height: 7em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+      "name link"
+      "stars language";
+  align-items: center;
+  justify-items: center;
+  font-size: .8em;
+  color: darkmagenta;
+}
+
+.repo:nth-child(odd){
+  animation: .8s ease-out 0s 1 slideInFromRight;
+}
+.repo:nth-child(even){
+  animation: .8s ease-out 0s 1 slideInFromLeft;
+  margin-left: 4%;
+}
+.repo__name{
+  grid-area: name;
+  text-align: center;
+}
+.repo__link{
+  grid-area: link;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: all .3s;
+  color: darkmagenta;
+  text-align: center;
+}
+.repo__language{
+  grid-area: language;
+  text-align: center;
+}
+.repo__Stars{
+  grid-area: stars;
+  text-align: center;
+}
+
