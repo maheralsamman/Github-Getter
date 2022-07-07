@@ -1,4 +1,5 @@
-This is my github getter
+This is my github getter app (backend - frontend) which is done during the hackday.
+I used Nodejs, Express, React, CSS
 
 # Getting Started with Create React App
 
