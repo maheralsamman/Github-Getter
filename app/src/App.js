@@ -49,7 +49,7 @@ function App() {
       <main className="gitDataContainer">
         {loading ? (
           <Loading loading={loading} />
-        ) : gitData.error ? (
+        ) : gitData.error || gitRepos.error ? (
           <p className="error">{gitData.error}</p>
         ) : Object.keys(gitData).length ? (
           <div className="gitData">

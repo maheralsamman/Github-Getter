@@ -34,7 +34,7 @@ body {
   height: 54px;
 }
 .form__input:focus {
-  outline: 4px solid darkmagenta;
+  outline: 4px solid #8b008b;
 }
 .form__button {
   width: 190px;

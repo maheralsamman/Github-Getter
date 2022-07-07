@@ -12,7 +12,7 @@ const override = {
   
 const Loading = ({loading}) => {
   return (
-    <RingLoader color="#ff0000" loading={loading} cssOverride={override} size={150} />
+    <RingLoader color="#8b008b" loading={loading} cssOverride={override} size={150} />
     )
 }
 
