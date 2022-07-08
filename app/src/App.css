@@ -74,12 +74,15 @@ color: darkmagenta;
 cursor: default;
 font-weight: 600;
 text-align: center;
+font-size: calc(10px + 1.2vw);
 }
 .gitInfo__id{
   grid-area: id;
   transition: all .2s;
   color: darkmagenta;
   cursor: default;
+  font-size: calc(10px + 1vw);
+  text-align: center;
 }
 .gitInfo__link{
   grid-area: link;
@@ -88,12 +91,16 @@ text-align: center;
   cursor: pointer;
   transition: all .2s;
   color: darkmagenta;
+  font-size: calc(10px + 1vw);
+  text-align: center;
 }
 .gitInfo__date{
   grid-area: date;
   transition: all .2s;
   color: darkmagenta;
   cursor: default;
+  font-size: calc(10px + 1vw);
+  text-align: center;
 }
 .gitInfo__img{
   grid-area: img;
@@ -178,6 +185,7 @@ transition: transform .3s
 .repo__name{
   grid-area: name;
   text-align: center;
+  font-size: calc(8px + .7vw);
 }
 .repo__link{
   grid-area: link;
@@ -187,13 +195,16 @@ transition: transform .3s
   transition: all .3s;
   color: darkmagenta;
   text-align: center;
+  font-size: calc(8px + .7vw);
 }
 .repo__language{
   grid-area: language;
   text-align: center;
+  font-size: calc(8px + .7vw);
 }
 .repo__Stars{
   grid-area: stars;
   text-align: center;
+  font-size: calc(8px + .7vw);
 }
 

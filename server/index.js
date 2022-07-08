@@ -55,7 +55,8 @@ const getRepos = async (req, res) => {
   }
 };
 
-// ENDPOINTS HERE
+// ENDPOINTS
 app.get("/api/github/:user", getData);
 app.get("/api/github/:user/repos", getRepos);
+
 app.listen(PORT, console.log("server is connected 3001"));
