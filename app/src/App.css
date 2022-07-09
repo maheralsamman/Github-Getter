@@ -168,7 +168,7 @@ transition: transform .3s
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
       "name link"
-      "stars language";
+      "stars languages";
   align-items: center;
   justify-items: center;
   font-size: .8em;
@@ -198,7 +198,7 @@ transition: transform .3s
   font-size: calc(8px + .7vw);
 }
 .repo__language{
-  grid-area: language;
+  grid-area: languages;
   text-align: center;
   font-size: calc(8px + .7vw);
 }
